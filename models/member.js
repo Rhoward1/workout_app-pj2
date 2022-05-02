@@ -2,13 +2,13 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connections');
 
-class User extends Model {
-//   checkPassword(loginPw) {
-//     return bcrypt.compareSync(loginPw, this.password);
-//   }
+class Member extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
 }
 
-User.init(
+Member.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -16,7 +16,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_name: {
+    member_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -35,27 +35,27 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [15],
       },
     },
   },
   {
-    // hooks: {
-    //   beforeCreate: async (newUser) => {
-    //     newUser.password = await bcrypt.hash(newUser.password, 10);
-    //     return newUser;
-    //   },
-    //   beforeUpdate: async (updateNewUser) => {
-    //     updateNewUser.password = await bcrypt.hash(updateNewUser.password, 10);
-    //     return updateNewUser;
-    //   },
-    // },
+    hooks: {
+      beforeCreate: async (newMember) => {
+        newMember.password = await bcrypt.hash(newMember.password, 10);
+        return newMember;
+      },
+      beforeUpdate: async (updateNewMember) => {
+        updateNewMember.password = await bcrypt.hash(updateNewMember.password, 10);
+        return updateNewMember;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'member',
   }
 );
 
-module.exports = User;
+module.exports = Member;
