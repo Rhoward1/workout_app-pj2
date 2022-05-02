@@ -24,6 +24,12 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
+
+router.post("/search", (req,res) => {
+  console.log(req.body)
+  const{search} =req.body
+  router.get
+})
 })
 
 module.exports =router
