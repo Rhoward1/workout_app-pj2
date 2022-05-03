@@ -1,10 +1,20 @@
 const router = require('express').Router();
-const { Workout_log } = require('../../models');
+const { Log } = require('../../models');
 
+//get the logged data
+router.get('/', async(req, res)=> {
+  const logData = await Log.findAll().catch((err) => {
+    res.json(err);
+  });
+  const logs = logData.map((log) => log.get ({ plain: true}));
+  res.render('all', {logs})
+})
+
+//create a new log
 router.post('/', async(req, res) => {
     try{
-      const compWorkoutData = await Workout_log.create( {
-        // date: req.body.date,
+      const compWorkoutData = await Log.create( {
+        date: req.body.date,
         length: req.body.length,
         rating: req.body.rating
       });

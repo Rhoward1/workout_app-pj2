@@ -38,10 +38,11 @@ function getRandomWorkout(exercises) {
   for (let i=0; i < 4; i++) {
     const indexNum = Math.floor(Math.random() * exercises.length)
   const randomWorkout = exercises[indexNum]
+  const workoutBodypart = randomWorkout.bodyPart
   const workoutName = randomWorkout.name
   const workoutGif = randomWorkout.gifUrl
   const workoutTarget = randomWorkout.target
-  randomWorkoutArray.push({workoutName, workoutGif, workoutTarget})
+  randomWorkoutArray.push({workoutBodypart, workoutName, workoutGif, workoutTarget})
   }
   return randomWorkoutArray
 }

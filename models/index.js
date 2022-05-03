@@ -1,4 +1,5 @@
 const Member = require('./member');
+const Log = require('./log')
 // const Workout_log = require("./workoutLog")
 // const CompWorkout = require('./compWorkout');
 // const CompWorkout = require('./compWorkout')
@@ -12,6 +13,6 @@ const Member = require('./member');
 // })
 
 
-module.exports = { Member }
+module.exports = { Member, Log }
     // Workout_log}
 // CompWorkout };
