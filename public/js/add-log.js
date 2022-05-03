@@ -10,9 +10,9 @@ async function newForm(event) {
         length,
         rating,
       }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      // headers: {
+      //   'Content-Type': 'application/json',
+      // },
     });
   
     if (response.ok) {
