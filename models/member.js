@@ -34,9 +34,9 @@ Member.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [15],
-      },
+      // validate: {
+      //   len: [10],
+      // },
     },
   },
   {

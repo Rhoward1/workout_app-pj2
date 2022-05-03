@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
-class Log extends Model {}
+class PastWorkout extends Model {}
 
-Log.init(
+PastWorkout.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,6 +11,11 @@ Log.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        // date_created: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false,
+        //     defaultValue: DataTypes.NOW,
+        //   },
         length: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -18,7 +23,13 @@ Log.init(
         rating: {
             type: DataTypes.STRING,
             allowNull: false,
-        
+        },
+        member_id: {
+            type: DataTypes.INTEGER,
+            references:{
+                model: "memeber",
+                key: "id",
+            },
         },
     },
     {
@@ -30,4 +41,4 @@ Log.init(
     }
 );
 
-module.exports= Log;
+module.exports= PastWorkout;

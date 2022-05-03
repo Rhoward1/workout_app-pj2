@@ -1,0 +1,119 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Log your workout here:</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Project:</h3>
+
+    <form class="form new-workout-form">
+      <div class="form-group">
+        <label for="project-name">Length (in minutes):</label>
+        <input class="form-input" type="text" placeholder="minutes" id="length" name="project-name" />
+      </div>
+      <div class="form-group">
+        <label for="project-funding">
+          Rating on a scale of 1(bad)-5(amazing):</label>
+        <input class="form-input" type="text" id="rating" name="project-funding" />
+      </div>
+      {{!-- <div class="form-group">
+        <label for="project-desc">description:</label>
+        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+      </div> --}}
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if projects.length}}
+  <div class="col-md-6 project-list">
+    <h3>Completed Workouts</h3>
+
+    {{#each projects as |project|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+     <div class="text-center">
+  <h3>{{format_date date_created}}</h3>     
+  <h5>Length: {{name}}</h5>
+  <p>
+ 
+    <h5 class="dollar-amount">Rating:{{ needed_funding}}</h5>
+  
+  </p>
+  <p>
+    <button class="btn btn-primary">delete</button>
+  </p>
+</div>
+      </div>
+    </div>
+    
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+
+
+<script src="./js/pastWorkouts.js"></script>
+{{!-- <div class="container">
+    <div class="row">
+        <div class="col-2">
+
+            <div class="add-logged-workout">
+                <h2>
+                    Log your workout below!
+                </h2>
+                <form class="new-log-form">
+                    <label for="length">
+                        Length of Workout:
+                    </label>
+                    <br />
+                    <textarea id="length" name="length" rows="1" cols="15">
+      {{!-- {{length}} --}}
+    {{!-- </textarea>
+                    <br />
+                    <label for="rating">
+                        Rate your workout 1-5:
+                    </label>
+                    <br />
+                    <textarea id="rating" name="rating" rows="1" cols="15">
+
+    </textarea>
+                    <br />
+                    <button type="submit" value="Submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-10">
+
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"> {{length}}</p>
+                                <p class="card-text">{{rating}}<small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> --}}
+
+
+{{!-- </div> --}} 
+
+{{!-- <script src="/js/add-log.js"></script> --}}
