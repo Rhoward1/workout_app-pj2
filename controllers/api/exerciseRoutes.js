@@ -32,20 +32,23 @@ axios.request(options)
 });
 })
 
+const randomWorkoutArray=[]
 function getRandomWorkout(exercises) {
-  const randomWorkoutArray=[]
+
   for (let i=0; i < 4; i++) {
     const indexNum = Math.floor(Math.random() * exercises.length)
   const randomWorkout = exercises[indexNum]
-  randomWorkoutArray.push(randomWorkout)
+  const workoutName = randomWorkout.name
+  const workoutGif = randomWorkout.gifUrl
+  const workoutTarget = randomWorkout.target
+  randomWorkoutArray.push({workoutName, workoutGif, workoutTarget})
   }
   return randomWorkoutArray
 }
 
-//create a function that picks random workouts from the api (at least 4)
-//inclued in the pick is name of workout, target muscle, gifUrl
-//.filter() the results to only take params that I desire
-//use math.random()?
-//create a model for the information?
-
+// const newExerciseArray= options.filter(function(options) {
+//   return options.name
+  
+// })
+// console.log(newExerciseArray)
 module.exports =router
