@@ -1,18 +1,21 @@
 const router = require('express').Router();
 const { Log } = require('../../models');
 
-//get the logged data
+// get the logged data
 router.get('/', async(req, res)=> {
-  Log.findAll().then((logData) => {
-    res.json(logData);
-  });
- 
-  const logData = await Log.findAll()
-  .catch((err) => {
-    res.json(err);
-  });
-  const logs = logData.map((log) => log.get({ plain: true}));
-  res.render('loggedWorkout', {logs})
+  try {
+    const logData = await Log.findAll()
+    // Log.findAll().then((logData) => {
+    //   res.json(logData);
+    // });
+    const logs = logData.map((log) => log.get({ plain: true}));
+    res.render('loggedWorkout', {logs})
+  }
+    catch(err) {
+    res.status(500).json(err);
+  };
+  
+  
 });
 
 //create a new log
