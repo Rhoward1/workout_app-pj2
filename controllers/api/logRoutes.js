@@ -12,7 +12,7 @@ router.get('/', async(req, res)=> {
     res.json(err);
   });
   const logs = logData.map((log) => log.get({ plain: true}));
-  res.render('all', {logs})
+  res.render('loggedWorkout', {logs})
 });
 
 //create a new log
