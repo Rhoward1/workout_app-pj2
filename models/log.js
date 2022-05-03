@@ -11,26 +11,15 @@ Log.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        // date: {
-        //     type: DataTypes.DATEONLY,
-        //     defultValue: DataTypes.NOW,
-        // },
         length: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isDecimal: true,
-                isAlphanumeric: true,
-            }
         },
         rating: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isDecimal: true,
-            }
-        },
         
+        },
     },
     {
         sequelize,

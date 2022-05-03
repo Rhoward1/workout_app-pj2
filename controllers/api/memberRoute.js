@@ -1,15 +1,14 @@
 const router = require('express').Router();
 const { Member } = require('../../models');
-// const session = require('express-session')
 
 router.post('/signup', async (req, res) => {
+console.log(req.body)
   try {
     const UserData = await Member.create(req.body);
     console.log(UserData)
     req.session.save(() => {
       req.session.member_id = UserData.id;
       req.session.logged_in = true;
-
       res.status(200).json(UserData);
     });
   } catch (err) {
@@ -19,7 +18,6 @@ router.post('/signup', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    // Find the user who matches the posted e-mail address
     const memberData = await Member.findOne({ where: { email: req.body.email } });
 
     if (!memberData) {
@@ -29,7 +27,6 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // Verify the posted password with the password store in the database
     const acceptedPassword = await memberData.checkPassword(req.body.password);
 
     if (!acceptedPassword) {
@@ -39,7 +36,6 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    // Create session variables based on the logged in user
     req.session.save(() => {
       req.session.member_id = memberData.id;
       req.session.logged_in = true;
