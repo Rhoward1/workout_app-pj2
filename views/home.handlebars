@@ -40,37 +40,37 @@
 </div>
 
 
-    <div class="container">
-        <div class="row">
-          <div class="col-4">
-            Column
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      Column
 
 
-            <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment</label>
-                <select class="form-select" id="inputGroupSelect01">
-                  <option selected>Choose...</option>
-                  <option value="1">At Home</option>
-                  <option value="2">At the Gym</option>
-                  
-                </select>
-              </div>
-              <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
-                <select class="form-select" id="inputGroupSelect01">
-                  <option selected>Choose...</option>
-                  <option value="1">Back</option>
-                  <option value="2">Chest</option>
-                  <option value="3">Lower Arms</option>
-                  <option value="4">Upper Arms</option>
-                  <option value="5">Shoulders</option>
-                  <option value="6">Core / Waist</option>
-                  <option value="7">Upper Legs</option>
-                  <option value="8">Lower Legs</option>
-                </select>
-              </div>
-              <input class="btn btn-primary" type="submit" value="Submit">
-            <!-- <div class="form-floating">
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment</label>
+        <select class="form-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">At Home</option>
+          <option value="2">At the Gym</option>
+
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
+        <select class="form-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">Back</option>
+          <option value="2">Chest</option>
+          <option value="3">Lower Arms</option>
+          <option value="4">Upper Arms</option>
+          <option value="5">Shoulders</option>
+          <option value="6">Core / Waist</option>
+          <option value="7">Upper Legs</option>
+          <option value="8">Lower Legs</option>
+        </select>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Submit">
+      <!-- <div class="form-floating">
                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                   <option selected>Choose your target area</option>
                   <option value="1">Back</option>
@@ -85,70 +85,82 @@
                 </select>
                 <label for="floatingSelect"></label>
               </div> -->
+    </div>
+    <div class="col-8">
+
+      Column
+      {{#each exercise as |exercises|}}
+        <div class="row mb-4 exercises">
+          <div class="col-md-4">
+            <h2>DATE</h2>
+            <p>
+              {{exercises.workoutBodypart}}
+            </p>
+            <p>{{exercises.workoutName}}</p>
+            <p>{{exercises.workoutGif}}</p>
+            <p>{{exercises.workoutTarget}}</p>
           </div>
-          <div class="col-8">
-              
-            Column
-
-            <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="./images/smallplaceholderimage.jpg" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="./images/smallplaceholderimage2.jpg" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="./images/smallplaceholderimage.jpg" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="./images/smallplaceholderimage2.jpg" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+        {{/each}}
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="./images/smallplaceholderimage2.jpg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="./images/smallplaceholderimage.jpg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="./images/smallplaceholderimage2.jpg" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-            <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
@@ -186,7 +198,7 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div> -->
-          </div>
-          
-        </div>
-      </div>
+  </div>
+
+</div>
+</div>
