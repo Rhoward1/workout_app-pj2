@@ -5,10 +5,10 @@ const Log = require('./log')
 // const CompWorkout = require('./compWorkout')
 
 
-// CompWorkout.belongsTo(Member, {
+// Log.belongsTo(Member, {
 //     foreignKey: 'member_id',
 // })
-// Member.hasMany(CompWorkout, {
+// Member.hasMany(Log, {
 //     foreignKey: 'member_id',
 // })
 
