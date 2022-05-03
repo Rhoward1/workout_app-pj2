@@ -1,28 +1,61 @@
-<div 
-class="add-logged-workout">
-    <h2>
-      Log your workout below!
-    </h2>
-    <form class="new-log-form">
-      <label for="length">
-        Length of Workout:
-      </label>
-      <br />
-      <textarea id="length" name="length" rows="2" cols="30">
+
+
+    <div class="container">
+        <div class="row">
+        <div class="col-2">
+
+            <div class="add-logged-workout">
+                <h2>
+                    Log your workout below!
+                </h2>
+                <form class="new-log-form">
+                    <label for="length">
+                        Length of Workout:
+                    </label>
+                    <br />
+                    <textarea id="length" name="length" rows="1" cols="15">
       {{!-- {{length}} --}}
     </textarea>
-      <br />
-      <label for="rating">
-        Rate your workout 1-5:
-      </label>
-      <br />
-      <textarea id="rating" name="rating" rows="5" cols="30">
-      {{!-- {{rating}} --}}
+                    <br />
+                    <label for="rating">
+                        Rate your workout 1-5:
+                    </label>
+                    <br />
+                    <textarea id="rating" name="rating" rows="1" cols="15">
+  
     </textarea>
-      <br />
-      <button type="submit" value="Submit">
-        Submit
-      </button>
-    </form>
-    </div>
-    <script src="../public/js/add-log.js"></script>
+                    <br />
+                    <button type="submit" value="Submit">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            </div>
+
+
+
+        <div class="row">
+        <div class="col-10">
+
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text"> {{length}}</p>
+                                <p class="card-text">{{rating}}<small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                        </div>
+                    </div>
+                </div>
+
+
+                </div>
+         
+                   <script src="/add-log.js"></script>

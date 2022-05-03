@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary: #389393;
     --secondary: #f5a25d;
     --tertiary: #fa7f72;
@@ -83,7 +83,7 @@
   }
   
   /* CARDS */
-  .dish-card {
+  /* .dish-card {
     margin: 20px;
     flex: 0 1 300px;
     padding: 5px;
@@ -141,10 +141,9 @@
   }
   
   /* LAYOUT */
-  .container {
+  /* .container {
     display: flex;
     flex-flow: column wrap;
     align-content: flex-start;
     align-items: center;
-  }
-  
+  } */
