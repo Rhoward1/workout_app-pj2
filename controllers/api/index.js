@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const exersiseRoutes = require("./exerciseRoutes")
 const memberRoute = require('./memberRoute')
-const workout_log= require('./logRoutes')
+const logRoute= require('./logRoutes')
 
 
 router.use ('/exercise', exersiseRoutes)
 router.use('/member', memberRoute);
-router.use('/completed-workout', workout_log)
+router.use('/logged-workout', logRoute);
 
 module.exports = router;
