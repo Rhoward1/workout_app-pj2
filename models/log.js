@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
-class CompWorkout extends Model { }
+class Log extends Model {}
 
-CompWorkout.init(
+Log.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,6 +11,10 @@ CompWorkout.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        // date: {
+        //     type: DataTypes.DATEONLY,
+        //     defultValue: DataTypes.NOW,
+        // },
         length: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -25,14 +29,16 @@ CompWorkout.init(
             validate: {
                 isDecimal: true,
             }
-
         },
+        
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'comp_workouts',
+        modelName: 'log',
     }
 );
 
-module.exports = CompWorkout;
+module.exports= Log;
