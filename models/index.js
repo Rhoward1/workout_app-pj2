@@ -4,14 +4,15 @@ const PastWorkout = require('./pastWorkout')
 // const CompWorkout = require('./compWorkout');
 // const CompWorkout = require('./compWorkout')
 
+Member.hasMany(PastWorkout, {
+    foreignKey: 'member_id',
+    onDelete: 'CASCADE'
+});
 
 PastWorkout.belongsTo(Member, {
     foreignKey: 'member_id',
 })
-Member.hasMany(PastWorkout, {
-    foreignKey: 'member_id',
-    onDelete: 'CASCADE'
-})
+
 
 
 module.exports = { Member, PastWorkout }

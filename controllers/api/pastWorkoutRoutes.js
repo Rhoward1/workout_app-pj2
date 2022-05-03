@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { PastWorkout } = require('../../models');
 
-// get the logged data
 router.get('/', async(req, res)=> {
   try {
     const logData = await PastWorkout.findAll()
@@ -9,7 +8,7 @@ router.get('/', async(req, res)=> {
       // res.json(logData);
     // });
     const logs = logData.map((log) => log.get({ plain: true}));
-    res.render('loggedWorkout', {logs})
+    res.render('pastWorkouts', {logs})
   }
     catch(err) {
     res.status(500).json(err);
@@ -24,7 +23,7 @@ router.post('/', async(req, res) => {
     try{
       const compWorkoutData = await PastWorkout.create({
         ...req.body,
-        memeber_id: req.session.member_id,
+        member_id: req.session.member_id,
         //        length: req.body.length,
         // rating: req.body.rating
       });

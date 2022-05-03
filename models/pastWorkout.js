@@ -11,11 +11,11 @@ PastWorkout.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        // date_created: {
-        //     type: DataTypes.DATE,
-        //     allowNull: false,
-        //     defaultValue: DataTypes.NOW,
-        //   },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+          },
         length: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -27,7 +27,7 @@ PastWorkout.init(
         member_id: {
             type: DataTypes.INTEGER,
             references:{
-                model: "memeber",
+                model: "member",
                 key: "id",
             },
         },
@@ -37,7 +37,7 @@ PastWorkout.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'log',
+        modelName: 'pastWorkout',
     }
 );
 
