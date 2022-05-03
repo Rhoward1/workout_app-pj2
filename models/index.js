@@ -1,13 +1,18 @@
 const Member = require('./member');
-// const Project = require('./Project');
+const Log = require('./log')
+// const Workout_log = require("./workoutLog")
+// const CompWorkout = require('./compWorkout');
+// const CompWorkout = require('./compWorkout')
 
-// User.hasMany(Project, {
-//   foreignKey: 'user_id',
-//   onDelete: 'CASCADE'
-// });
 
-// Project.belongsTo(User, {
-//   foreignKey: 'user_id'
-// });
+// CompWorkout.belongsTo(Member, {
+//     foreignKey: 'member_id',
+// })
+// Member.hasMany(CompWorkout, {
+//     foreignKey: 'member_id',
+// })
 
-module.exports = { Member };
+
+module.exports = { Member, Log }
+    // Workout_log}
+// CompWorkout };
