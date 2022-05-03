@@ -26,7 +26,7 @@ PastWorkout.init(
         },
         member_id: {
             type: DataTypes.INTEGER,
-            references:{
+            references: {
                 model: "member",
                 key: "id",
             },

@@ -11,9 +11,11 @@ const newWorkoutForm= async (event) =>{
       headers: {
         'Content-Type': 'application/json',
       },
+    
     });
+    console.log(response)
     if (response.ok) {
-      document.location.replace('/pastWorouts');
+      document.location.replace('/pastWorkouts');
     }else {
       alert('Failed to log workout');
     }
