@@ -1,14 +1,14 @@
 const Member = require('./member');
-const PastWorkout = require('./pastWorkout')
+const PastWorkouts = require('./pastWorkouts')
 
-Member.hasMany(PastWorkout, {
+Member.hasMany(PastWorkouts, {
     foreignKey: 'member_id',
     onDelete: 'CASCADE'
 });
 
-PastWorkout.belongsTo(Member, {
+PastWorkouts.belongsTo(Member, {
     foreignKey: 'member_id',
 })
 
-module.exports = { Member, PastWorkout }
+module.exports = { Member, PastWorkouts }
 

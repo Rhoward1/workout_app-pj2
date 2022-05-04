@@ -1,16 +1,31 @@
 const router = require('express').Router();
-const path = require('path');
+const {Member, PastWorkouts }= require("../models")
 
 router.get('/', (req, res) => {
   res.render('home')
   // res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
 })
 
-router.get('/past-workout', (req,res) => {
-  res.render('pastWorkouts')
+router.get('/past_workouts', async (req, res) => {
+  try {
+    const memberData = await Member.findByPk(req.session.member_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: PastWorkouts}],
+    });
+    console.log(memberData)
+    const member = memberData.get({plain: true});
+    res.render('pastworkouts')
+    // console.log(member)
+  } catch (err) {
+    res.status(500).json(err);
+  }
 })
 
 router.get('/login', (req, res) => {
+  // if (req.session.logged_in) {
+  //   res.redirect('/pastworkouts');
+  //   return;
+  // }
   res.render('login')
  
 })
