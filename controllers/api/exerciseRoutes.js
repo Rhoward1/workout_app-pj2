@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const axios = require("axios");
 
-router.get("/exercisedb/:bodypart?", (req, res) => {
+router.get("/exercisedb/:bodypart?/:equipment?", (req, res) => {
 console.log(req.params.bodypart)
 if (req.params.bodypart) {
 
@@ -41,15 +41,28 @@ axios.request(options)
 
 
 function getRandomWorkout(exercises) {
+  // console.log(exercises)
   const randomWorkoutArray=[]
+  const filterByEquipment = exercises.filter(workout => {
+    return workout.equipment === "barbell" || 
+     workout.equipment === "body weight" ||
+     workout.equipment === "band" 
+  })
+  console.log(filterByEquipment)
   for (let i=0; i < 4; i++) {
-    const indexNum = Math.floor(Math.random() * exercises.length)
-  const randomWorkout = exercises[indexNum]
+    const indexNum = Math.floor(Math.random() * filterByEquipment.length)
+  const randomWorkout = filterByEquipment[indexNum]
   const workoutBodypart = randomWorkout.bodyPart
   const workoutName = randomWorkout.name
   const workoutGif = randomWorkout.gifUrl
   const workoutTarget = randomWorkout.target
-  randomWorkoutArray.push({workoutBodypart, workoutName, workoutGif, workoutTarget})
+  const workoutEquipment = randomWorkout.equipment
+  randomWorkoutArray.push({workoutBodypart, workoutName, workoutGif, workoutTarget,workoutEquipment })
+// console.log(randomWorkoutArray)
+  
+ 
+  // console.log(filterByEquipment)
+
   }
   // console.log(randomWorkoutArray)
   return randomWorkoutArray

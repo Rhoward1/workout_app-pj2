@@ -3,9 +3,9 @@
   <div class="col-4">
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment</label>
-      <select class="form-select" id="inputGroupSelect01">
+      <select class="form-select" id="equipment-choice">
         <option selected>Choose...</option>
-        <option value="1">At Home</option>
+        <option value="band">band</option>
         <option value="2">At the Gym</option>
 
       </select>
@@ -18,10 +18,10 @@
         <option value="chest">chest</option>
         <option value="lower arms">lower arms</option>
         <option value="upper arms">upper arms</option>
-        <option value="5">shoulders</option>
-        <option value="6">waist</option>
-        <option value="7">upper legs</option>
-        <option value="8">lower legs</option>
+        <option value="shoulders">shoulders</option>
+        <option value="waist">waist</option>
+        <option value="upper legs">upper legs</option>
+        <option value="lower legs">lower legs</option>
       </select>
     </div>
     <input class="btn btn-primary workoutButton" type="submit" value="submit">
@@ -42,6 +42,7 @@
                       <h5 class= "bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</h5>
                       <p class= 'workoutName'>Name of Workout:{{randomWorkout.workoutName}}</p>
                      <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
+                       <p class="targetMuscle">Equipment: {{randomWorkout.workoutEquipment}}</p>
                     </div>
                   </div>
                 </div>

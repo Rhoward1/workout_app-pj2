@@ -12,8 +12,10 @@
 const exerciseFormHandler = async () => {
     console.log("hello")
     const bodyPart = document.getElementById("body-part-dropdown").value
+    const equipment = document.getElementById("equipment-choice").value
 console.log(bodyPart)
-    const response = await fetch ('/api/exercise/exercisedb/'+ bodyPart, {
+console.log(equipment)
+    const response = await fetch ('/api/exercise/exercisedb/'+ bodyPart + "/" + equipment, {
         method: 'GET',
         headers: { 'Content-Type': "application/json"},
     });
@@ -23,6 +25,7 @@ console.log(bodyPart)
     }else {
         alert(response.statusText);
     }
+
 }
 
 document
