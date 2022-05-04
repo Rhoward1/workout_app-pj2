@@ -16,6 +16,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   res.render('signup') 
+  // res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
 
 })
 
