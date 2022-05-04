@@ -18,7 +18,7 @@ const newWorkoutForm= async (event) =>{
     });
     console.log(response)
     if (response.ok) {
-      document.location.replace('/past-workout');
+      document.location.reload();
     }else {
       alert('Failed to log workout');
     }

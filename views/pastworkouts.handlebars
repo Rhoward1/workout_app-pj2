@@ -27,12 +27,12 @@
       </div>
     </form>
   </div>
-
-  {{!-- {{#if pastWorkouts.length}} --}}
+{{member_name}}
+  {{#if pastWorkouts}}
   <div class="col-md-6 project-list">
     <h3>Completed Workouts</h3>
 
-    {{!-- {{#each pastWorkouts as |pastWorkout|}} --}}
+    {{#each pastWorkouts as |pastWorkout|}}
     <div class="row mb-2">
       <div class="col-md-8">
      <div class="text-center">
@@ -51,9 +51,9 @@
       </div>
     </div>
     
-    {{!-- {{/each}} --}}
+    {{/each}}
   </div>
-  {{!-- {{/if}} --}}
+  {{/if}}
 </div>
 
 
