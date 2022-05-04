@@ -36,4 +36,11 @@ router.get('/signup', (req, res) => {
  
 })
 
+router.get('/randomexercise', (req, res) => {
+  res.render('randomExercise')
+})
+
+router.get('/testpastworkout', (req, res) => {
+  res.render('pastworkouts')
+})
 module.exports = router
