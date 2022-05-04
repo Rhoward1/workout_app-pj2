@@ -1,13 +1,3 @@
-// const workoutBtn = document.querySelector(".workoutButton");
-
-
-
-
-// workoutBtn.addEventListener("click", function () {
-//     console.log("hello")
-// // return getRandomWorkout()
-// });
-
 
 const exerciseFormHandler = async () => {
     console.log("hello")
@@ -21,7 +11,7 @@ console.log(equipment)
     });
     // console.log(bodyPart)
     if (response.ok) {
-        document.location.replace('/api/exercise/exercisedb/' + bodyPart);
+        document.location.replace('/api/exercise/exercisedb/' + bodyPart + "/" + equipment);
     }else {
         alert(response.statusText);
     }

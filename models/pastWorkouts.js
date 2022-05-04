@@ -16,6 +16,7 @@ PastWorkouts.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
           },
+          
         length: {
             type: DataTypes.STRING,
             allowNull: false,
