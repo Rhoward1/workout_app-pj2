@@ -7,7 +7,10 @@ const newWorkoutForm= async (event) =>{
   if (length && rating) {
     const response = await fetch ('/api/past-workout', {
       method:'POST',
-      body: JSON.stringify({length, rating}),
+      body: JSON.stringify({
+        length, 
+        rating
+      }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -15,7 +18,7 @@ const newWorkoutForm= async (event) =>{
     });
     console.log(response)
     if (response.ok) {
-      document.location.replace('/pastWorkouts');
+      document.location.replace('/past-workout');
     }else {
       alert('Failed to log workout');
     }
