@@ -3,7 +3,21 @@ const {Member, PastWorkouts }= require("../models")
 
 router.get('/', (req, res) => {
   res.render('landingpage')
+})
+
+// router.get('/exersies', (req, res) => {
+//   res.render('home')
+// })
+
+
+router.get('/login', (req, res) => {
+  res.render('login')
+})
+
+router.get('/signup', (req, res) => {
+  res.render('signup') 
   // res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
+
 })
 
 router.get('/past_workouts', async (req, res) => {
@@ -21,26 +35,4 @@ router.get('/past_workouts', async (req, res) => {
   }
 })
 
-router.get('/login', (req, res) => {
-  // if (req.session.logged_in) {
-  //   res.redirect('/pastworkouts');
-  //   return;
-  // }
-  res.render('login')
- 
-})
-
-
-router.get('/signup', (req, res) => {
-  res.render('signup')
- 
-})
-
-router.get('/randomexercise', (req, res) => {
-  res.render('randomExercise')
-})
-
-router.get('/testpastworkout', (req, res) => {
-  res.render('pastworkouts')
-})
 module.exports = router
