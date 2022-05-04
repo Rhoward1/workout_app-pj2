@@ -19,9 +19,9 @@ axios.request(options)
 //  return response.data
   // })
   .then (function (exercises){
-    console.log(exercises)
+    // console.log(exercises)
     const workouts = getRandomWorkout(exercises.data)
-    console.log(workouts)
+    // console.log(workouts)
     res.render("randomExercise", {workouts})
     // res.json(workouts)
     // console.log(exercise)
