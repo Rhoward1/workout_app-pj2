@@ -2,8 +2,12 @@ const router = require('express').Router();
 const {Member, PastWorkouts }= require("../models")
 
 router.get('/', (req, res) => {
-  res.render('home')
+  res.render('landingpage')
 })
+
+// router.get('/exersies', (req, res) => {
+//   res.render('home')
+// })
 
 
 router.get('/login', (req, res) => {
@@ -12,6 +16,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   res.render('signup') 
+
 })
 
 router.get('/past_workouts', async (req, res) => {
@@ -29,12 +34,5 @@ router.get('/past_workouts', async (req, res) => {
     res.status(500).json(err);
   }
 })
-
-// router.get('/randomexercise', (req, res) => {
-//   try{
-//     const exerciseData = await
-//   }
-//   res.render('randomExercise')
-// })
 
 module.exports = router
