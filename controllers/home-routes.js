@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {Member, PastWorkouts }= require("../models")
 
 router.get('/', (req, res) => {
-  res.render('home')
+  res.render('landingpage')
   // res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
 })
 
