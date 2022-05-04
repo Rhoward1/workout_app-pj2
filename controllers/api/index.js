@@ -4,8 +4,10 @@ const memberRoute = require('./memberRoute')
 const pastWorkoutRoutes= require('./pastWorkoutsRoutes')
 
 
+
 router.use ('/exercise', exersiseRoutes)
 router.use('/member', memberRoute);
 router.use('/past-workout', pastWorkoutRoutes);
+
 
 module.exports = router;

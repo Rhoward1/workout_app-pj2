@@ -2,7 +2,8 @@ const router = require('express').Router();
 const {Member, PastWorkouts }= require("../models")
 
 router.get('/', (req, res) => {
-  res.render('home')
+
+  res.render('landingpage')
 })
 
 
@@ -12,6 +13,8 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
   res.render('signup') 
+  // res.sendFile(path.join(__dirname, '../views/layouts/main.handlebars'));
+
 })
 
 router.get('/past_workouts', async (req, res) => {
