@@ -12,9 +12,10 @@ router.get('/past_workouts', async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: PastWorkouts}],
     });
-    console.log(memberData)
+    // console.log(memberData)
     const member = memberData.get({plain: true});
-    res.render('pastworkouts')
+    console.log(member)
+    res.render('pastworkouts', member)
     // console.log(member)
   } catch (err) {
     res.status(500).json(err);
