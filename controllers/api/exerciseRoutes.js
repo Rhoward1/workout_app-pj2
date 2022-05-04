@@ -35,7 +35,7 @@ const randomWorkoutArray=[]
 function getRandomWorkout(exercises) {
 
   for (let i=0; i < 4; i++) {
-    const indexNum = Math.floor(Math.random() * exercises.length)
+  const indexNum = Math.floor(Math.random() * exercises.length)
   const randomWorkout = exercises[indexNum]
   const workoutBodypart = randomWorkout.bodyPart
   const workoutName = randomWorkout.name
