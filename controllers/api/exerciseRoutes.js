@@ -15,11 +15,15 @@ const options = {
 
 
 axios.request(options)
-.then(function (response) {
- return response.data
-  }).then (function (exercises){
-    const workouts = getRandomWorkout(exercises)
-    res.json(workouts)
+// .then(function (response) {
+//  return response.data
+  // })
+  .then (function (exercises){
+    // console.log(exercises)
+    const workouts = getRandomWorkout(exercises.data)
+    // console.log(workouts)
+    res.render("randomExercise", {workouts})
+    // res.json(workouts)
     // console.log(exercise)
   })
   .catch(function (error) {

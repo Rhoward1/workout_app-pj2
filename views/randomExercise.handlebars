@@ -29,17 +29,33 @@
   </div>
   <div class="col-8">
 
-    Column
+{{#if workouts.length}}
 
-{{#if workout.length}}
+{{#each workouts as |randomWorkout|}}
+ <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                   <img src={{randomWorkout.workoutGif}}>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class= "bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</h5>
+                      <p class= 'workoutName'>Name of Workout:{{randomWorkout.workoutName}}</p>
+                     <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+{{!-- <div class="text-center">
 
-{{#each randomWorkoutArray as |randomWorkout|}}
-<div class="text-center">
-  <h2>Body Part:{{randomWorkout.workoutBodypart}}</h2>
-  <p>Name of Workout:{{randomWorkout.workoutName}}</p>
-  <p>Target Muscle: {{randomWorkout.workoutTarget}}</p>
+  
+  
    <img src={{randomWorkout.workoutGif}}>
-</div>
+</div> --}}
+{{/each}}
+{{/if}}
+
+
 
     {{!-- <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
