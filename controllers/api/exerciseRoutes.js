@@ -2,11 +2,6 @@ const router = require('express').Router();
 const path = require('path');
 const axios = require("axios");
 
-
-// router.get('/exercise', (req, res) => {
-//   res.render('exercise')
-// })
-
 router.get("/exercisedb", (req, res) => {
 
 const options = {

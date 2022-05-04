@@ -1,18 +1,14 @@
 const Member = require('./member');
-const Log = require('./log')
-// const Workout_log = require("./workoutLog")
-// const CompWorkout = require('./compWorkout');
-// const CompWorkout = require('./compWorkout')
+const PastWorkouts = require('./pastWorkouts')
 
+Member.hasMany(PastWorkouts, {
+    foreignKey: 'member_id',
+    onDelete: 'CASCADE'
+});
 
-// Log.belongsTo(Member, {
-//     foreignKey: 'member_id',
-// })
-// Member.hasMany(Log, {
-//     foreignKey: 'member_id',
-// })
+PastWorkouts.belongsTo(Member, {
+    foreignKey: 'member_id',
+})
 
+module.exports = { Member, PastWorkouts }
 
-module.exports = { Member, Log }
-    // Workout_log}
-// CompWorkout };
