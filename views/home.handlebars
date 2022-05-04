@@ -3,29 +3,29 @@
   <div class="col-4">
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment</label>
-      <select class="form-select" id="inputGroupSelect01">
+      <select class="form-select" id="equipment-choice">
         <option selected>Choose...</option>
-        <option value="1">At Home</option>
+        <option value="band">band</option>
         <option value="2">At the Gym</option>
 
       </select>
     </div>
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
-      <select class="form-select" id="inputGroupSelect01">
+      <select class="form-select" id="body-part-dropdown">
         <option selected>Choose...</option>
-        <option value="1">Back</option>
-        <option value="2">Chest</option>
-        <option value="3">Lower Arms</option>
-        <option value="4">Upper Arms</option>
-        <option value="5">Shoulders</option>
-        <option value="6">Core / Waist</option>
-        <option value="7">Upper Legs</option>
-        <option value="8">Lower Legs</option>
+        <option value="back">back</option>
+        <option value="chest">chest</option>
+        <option value="lower arms">lower arms</option>
+        <option value="upper arms">upper arms</option>
+        <option value="shoulders">shoulders</option>
+        <option value="waist">waist</option>
+        <option value="upper legs">upper legs</option>
+        <option value="lower legs">lower legs</option>
       </select>
     </div>
-    <input class="btn btn-primary" type="submit" value="Submit">
-
+    <input class="btn btn-primary workoutButton" type="submit" value="submit">
+<input class="btn btn-primary compworkout" type="link" value="Compleate">
   </div>
   <div class="col-8">
 
@@ -42,6 +42,7 @@
                       <h5 class= "bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</h5>
                       <p class= 'workoutName'>Name of Workout:{{randomWorkout.workoutName}}</p>
                      <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
+                       <p class="targetMuscle">Equipment: {{randomWorkout.workoutEquipment}}</p>
                     </div>
                   </div>
                 </div>
@@ -79,3 +80,4 @@
   </div>
 
 </div>
+<script src="/js/exercise.js"></script>

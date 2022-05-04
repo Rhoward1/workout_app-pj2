@@ -24,6 +24,7 @@ PastWorkouts.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        
         member_id: {
             type: DataTypes.INTEGER,
             references: {
