@@ -3,6 +3,7 @@
     <h2>YOU DID IT 🎉 </h2>
   </div>
 </div>
+    <div class="container">
 
 <div class="row mt-4">
   <div class="col-md-6">
@@ -27,7 +28,6 @@
       </div>
     </form>
   </div>
-{{member_name}}
   {{#if pastWorkouts}}
   <div class="col-md-6 project-list">
     <h3>Completed Workouts</h3>
@@ -37,7 +37,7 @@
       <div class="col-md-8">
      <div class="text-center">
          {{!-- <h3>{{format_date date_created}}</h3>  --}}
-  <h3>{{date_created}}</h3>     
+  <h3>{{format_date date_created}}</h3>     
   <h5>Length: {{pastWorkout.length}}</h5>
   <p>
  
@@ -54,6 +54,7 @@
     {{/each}}
   </div>
   {{/if}}
+</div>
 </div>
 
 

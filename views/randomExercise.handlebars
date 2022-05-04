@@ -31,15 +31,17 @@
 
     Column
 
-{{#if workout.length}}
+{{#if workouts}}
 
-{{#each randomWorkoutArray as |randomWorkout|}}
+{{#each workouts as |randomWorkout|}}
 <div class="text-center">
   <h2>Body Part:{{randomWorkout.workoutBodypart}}</h2>
   <p>Name of Workout:{{randomWorkout.workoutName}}</p>
   <p>Target Muscle: {{randomWorkout.workoutTarget}}</p>
    <img src={{randomWorkout.workoutGif}}>
 </div>
+{{/each}}
+{{/if}}
 
     {{!-- <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
