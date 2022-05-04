@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/randomExercise');
+        document.location.replace('/api/exercise/exercisedb');
       } else {
         alert(response.statusText);
       }
