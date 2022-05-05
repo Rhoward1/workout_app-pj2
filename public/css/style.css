@@ -31,7 +31,7 @@
 } 
 
 #buttons1 :hover{
-    color:rgb(253, 251, 251) !important;
+    color:rgb(4, 4, 4) !important;
     font-weight: bold !important;
     text-shadow: black 5px, 10px;
     filter: drop-shadow(5px 5px 0px rgb(251, 3, 205));
@@ -59,11 +59,27 @@ body {
   }
   h1{
       font-size: 60px;
-      font-family: fantasy;
+      /* font-family: fantasy; */
       color:#e105f5;
       text-align:center ;
       filter: drop-shadow(5px 5px 3px rgb(251, 250, 251));
   }
+h{
+    font-size: 30px;
+    /* font-family: fantasy; */
+    color:#fcfbfc;
+    text-align:center ;
+    filter: drop-shadow(5px 5px 3px rgb(251, 250, 251));  
+}
+
+label{
+    font-size: 20px;
+    /* font-family: fantasy; */
+    color:#e105f5;
+    text-align:center ;
+    filter: drop-shadow(5px 5px 3px rgb(5, 5, 5));
+}
+
 /* .container{
     margin-left: 20px;
     margin-right: 20px;
@@ -78,3 +94,12 @@ body {
     flex-direction: row !important;
     flex-wrap: wrap !important;
 } */
+footer{
+    font-size: 20px;
+    /* font-family: fantasy; */
+    color:#e105f5;
+    text-align:center ;
+    filter: drop-shadow(5px 5px 3px rgb(251, 250, 251));
+    margin-bottom: 5px;
+
+}
