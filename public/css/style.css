@@ -1,0 +1,28 @@
+.navbar {
+    background-color:rgb(130, 130, 130);
+    color:black;
+
+}
+#navtext :hover{
+    color:black !important;
+    font-weight: bold !important;
+    border: rgb(225, 5, 245);
+    text-shadow: black 5px, 10px;
+}
+#buttons :hover{
+    color:black !important;
+    font-weight: bold !important;
+    text-shadow: black 5px, 10px;
+}    
+
+#buttons1 :hover{
+    color:rgb(225, 5, 245) !important;
+    font-weight: bold !important;
+    text-shadow: black 5px, 10px;
+}   
+
+#buttons2 :hover{
+    color:rgb(225, 5, 245) !important;
+    font-weight: bold !important;
+    text-shadow: black 5px, 10px;
+}  
