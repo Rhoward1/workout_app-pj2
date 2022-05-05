@@ -7,11 +7,11 @@ const logout = async () => {
     if (response.ok) {
       document.location.replace('/landing');
     } else {
-     res.redirect('/api/member/login')
+     alert(response.statusText)
     }
   };
   
-  document.querySelector('#logout-btn').addEventListener('click', logout);
+  document.querySelector('#logout').addEventListener('click', logout);
   
 
   

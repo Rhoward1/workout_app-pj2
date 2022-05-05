@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Member } = require('../../models');
 
 router.post('/signup', async (req, res) => {
-console.log(req.body)
+// console.log(req.body)
   try {
     const UserData = await Member.create(req.body);
     console.log(UserData)
@@ -43,6 +43,7 @@ router.post('/login', async (req, res) => {
       res.json({ member: memberData, message: 'You are now logged in!' });
     });
 
+
   } catch (err) {
     res.status(400).json(err);
   }
@@ -58,5 +59,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
 
 module.exports = router;
