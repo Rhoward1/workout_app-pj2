@@ -89,12 +89,15 @@
        
         {{!-- <a href="/login">login</a> --}}
         
-      <div class="d-flex align-items-center buttons">
+      {{!-- <div class="d-flex align-items-center buttons"> --}}
         
-      <div id="buttons1">
-        <a href="/login" class="btn btn-light me-3">Login</a>
+      {{!-- <div id="buttons1">
+        <a href="/login" class="btn btn-light me-3">Login</a> --}}
         {{#if logged_in}} 
-        <a href="/logout" class="btn btn-light me-3" id="logout-btn">Logout</button>
+        <a href="/logout" >Logout</a>
+        <button class="btn btn-light me-3" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
         {{/if}}
         <a href="/signup" class="btn btn-dark">Sign Up</a>
         </div>
@@ -137,7 +140,7 @@
   
 
 {{#if logged_in}}
-<script src="/js/login.js"></script>
+{{!-- <script src="/js/login.js"></script> --}}
 <script src="/js/logout.js"></script>
 {{/if}}
 </body>
