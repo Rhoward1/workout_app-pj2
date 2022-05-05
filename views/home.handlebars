@@ -1,3 +1,4 @@
+<br>
 <h1>Weight 2 Go Fitness</h1>
 <div class="container">
 
@@ -27,7 +28,7 @@
         <option value="kettlebell">kettlebell</option>
       </select>
     </div>
-    <input class="btn btn-dark workoutButton" id="subglow" type="submit" value="submit">
+    <input class="btn btn-dark workoutButton subglow" type="submit" value="submit">
  <a href="/past_workouts" class="btn btn-dark me-3 completedWorkout">Workout Complete</a>
   </div>
   </div>
@@ -36,7 +37,7 @@
   <div class="row mb-4 justify-content-center">
     {{#if workouts.length}}
     {{#each workouts as |randomWorkout|}}
-    <div class="card mb-3" style="max-width: 540px; display:flex; margin: 5px; ">
+    <div class="card mb-3" style="max-width: 540px; display:flex; margin: 8px; ">
       <div class="row no-gutters">
         <div class="col-md-7 text-center">
           <img src={{randomWorkout.workoutGif}}>
@@ -84,4 +85,5 @@
   </div>
 
 </div>
+
 <script src="/js/exercise.js"></script>
