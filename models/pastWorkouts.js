@@ -16,6 +16,7 @@ PastWorkouts.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
           },
+
         length: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -24,7 +25,6 @@ PastWorkouts.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        
         member_id: {
             type: DataTypes.INTEGER,
             references: {
