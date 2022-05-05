@@ -1,6 +1,7 @@
 //required packages
 const router = require('express').Router();
 const axios = require("axios");
+require('dotenv').config();
 
 //renders the url when bodypart and equipment are passed in the dropdown menu
 router.get("/exercisedb/:bodypart?/:equipment?", (req, res) => {
