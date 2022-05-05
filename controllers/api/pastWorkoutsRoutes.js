@@ -14,5 +14,25 @@ router.post('/', async(req, res) => {
       res.status(400).json(err);
     }});
 
+    router.delete('/:id', async (req, res) => {
+      try {
+        const workoutData = await PastWorkouts.destroy({
+          where: {
+            id: req.params.id,
+            member_id: req.session.member_id,
+          },
+        });
+        console.log(workoutData)
+    
+        if (!workoutData) {
+          res.status(404).json({ message: 'No project found with this id!' });
+          return;
+        }
+    
+        res.status(200).json(workoutData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    });
 
 module.exports = router;
