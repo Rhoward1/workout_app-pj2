@@ -1,11 +1,15 @@
+//required packages
 const router = require('express').Router();
 const axios = require("axios");
 
+//renders the url when bodypart and equipment are passed in the dropdown menu
 router.get("/exercisedb/:bodypart?/:equipment?", (req, res) => {
-// console.log(req.params.bodypart)
-const equipmentRequest = req.params.equipment
-if (req.params.bodypart) {
 
+  //creates a variable to hold the parameter passed in equipment
+const equipmentRequest = req.params.equipment
+
+//when a parameter is passed for bodypart, it will take it from this api call
+if (req.params.bodypart) {
 
 const options = {
   method: 'GET',
@@ -16,9 +20,9 @@ const options = {
   }
 };
 
+//rednering the api call and calling getRandomWorkout function and then rendering it onto the homepage
 axios.request(options)
   .then (function (exercises){
-    // console.log(exercises)
     const workouts = getRandomWorkout(exercises.data, equipmentRequest)
     // console.log(workouts)
     res.render("home", {workouts})
@@ -30,10 +34,10 @@ axios.request(options)
 }else {
   res.render('home')
 }
-})
+});
 
+//function that generates a random workout first filtered by equipment, then filtered by bodypart and pushes it into the randomworkoutArray
 function getRandomWorkout(exercises, equipment) {
-  // console.log(exercises)
   const randomWorkoutArray=[]
   const filterByEquipment = exercises.filter(workout => {
     return workout.equipment === equipment
@@ -48,10 +52,7 @@ function getRandomWorkout(exercises, equipment) {
   const workoutTarget = randomWorkout.target
   const workoutEquipment = randomWorkout.equipment
   randomWorkoutArray.push({workoutBodypart, workoutName, workoutGif, workoutTarget,workoutEquipment })
-// console.log(randomWorkoutArray)
-// console.log(filterByEquipment)
   }
-  // console.log(randomWorkoutArray)
   return randomWorkoutArray
 }
 
