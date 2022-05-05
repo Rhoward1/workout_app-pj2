@@ -1,28 +1,54 @@
 .navbar {
+    background: linear-gradient(to left, #040404, #838283);
     background-color:rgb(130, 130, 130);
     color:black;
+    font-size: larger;
 
 }
 #navtext :hover{
     color:black !important;
     font-weight: bold !important;
-    border: rgb(225, 5, 245);
-    text-shadow: black 5px, 10px;
+    border: #e105f5 !important;
+    filter: drop-shadow(5px 5px 0px rgb(251, 3, 205));
+    /* text-shadow: black 5px, 10px; */
 }
-#buttons :hover{
+#navtext{
+    font-size: 25px;
+    color:black
+}
+.buttons :hover{
     color:black !important;
     font-weight: bold !important;
     text-shadow: black 5px, 10px;
+    filter: drop-shadow(5px 5px 0px rgb(251, 3, 205));
 }    
+.subglow :hover{
+    color:rgb(253, 252, 252) !important;
+    font-weight: bold !important;
+    text-shadow: rgb(254, 253, 253) 5px, 10px;
+    filter: drop-shadow(5px 5px 0px rgb(251, 3, 205));
+} 
 
 #buttons1 :hover{
-    color:rgb(225, 5, 245) !important;
+    color:rgb(253, 251, 251) !important;
     font-weight: bold !important;
     text-shadow: black 5px, 10px;
+    filter: drop-shadow(5px 5px 0px rgb(251, 3, 205));
 }   
 
 #buttons2 :hover{
-    color:rgb(225, 5, 245) !important;
+    color:rgb(34, 242, 15) !important;
     font-weight: bold !important;
     text-shadow: black 5px, 10px;
+    filter: drop-shadow(5px 5px 0px rgb(251, 3, 205));
 }  
+/* body{
+    
+    background-image: url('./') !important;
+} */
+body {
+    background-image: url('../images/bglogo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }

@@ -52,13 +52,14 @@
     <!-- Navbar brand -->
     <a class="navbar-brand me-2" href="/api/exercise/exercisedb">
       <img
-        src="/images/weight2gologo.png"
+        src="/images/w2glogo.png"
         height="50"
         alt="Logo"
         loading="lazy"
         style="margin-top: -1px;"
       />
     </a>
+    
 
     <!-- Toggle button -->
     <button
@@ -78,15 +79,17 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navtext">
         <li class="nav-item">
-          <a class="nav-link" href="/api/exercise/exercisedb">Home</a>
+          {{!-- <a class="nav-link" href="/api/exercise/exercisedb">Home</a> --}}
+          <a href="/api/exercise/exercisedb" class="btn btn-light me-3 buttons">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/past_workouts">Completed Exercises</a>
+          {{!-- <a class="nav-link" href="/past_workouts">Completed Exercises</a> --}}
+          <a href="/past_workouts" class="btn btn-light me-3 buttons">Completed Exercise</a>
         </li>
       </ul>
       <!-- Left links -->
 
-      <div class="d-flex align-items-center" id="buttons">
+      <div class="d-flex align-items-center buttons">
         <a href="/login" class="btn btn-light me-3">Login</a>
       <div id="buttons1">
         <a href="/signup" class="btn btn-dark">Sign Up</a>
