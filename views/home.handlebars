@@ -1,20 +1,11 @@
-    
 <div class="row">
   <div class="col-4">
-    <div class="input-group mb-3">
-      <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment</label>
-      <select class="form-select" id="equipment-choice">
-        <option selected>Choose...</option>
-        <option value="band">band</option>
-        <option value="2">At the Gym</option>
-
-      </select>
-    </div>
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
       <select class="form-select" id="body-part-dropdown">
         <option selected>Choose...</option>
         <option value="back">back</option>
+        <option value="cardio">cardio</option>
         <option value="chest">chest</option>
         <option value="lower arms">lower arms</option>
         <option value="upper arms">upper arms</option>
@@ -24,37 +15,49 @@
         <option value="lower legs">lower legs</option>
       </select>
     </div>
-    <input class="btn btn-dark workoutButton" type="submit" value="submit">
-<input class="btn btn-dark compworkout" type="link" value="Compleate">
+    <div class="input-group mb-3">
+      <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment: </label>
+      <select class="form-select" id="equipment-choice">
+        <option selected>Choose...</option>
+        <option value="body weight">body weight</option>
+        <option value="dumbbell">dumbbell</option>
+        <option value="kettlebell">kettlebell</option>
+      </select>
+    </div>
+    <input class="btn btn-primary workoutButton" type="submit" value="submit">
+
+    <input class="btn btn-primary compleatedWorkout" type="submit" value="Compleated Workout">
+
+
   </div>
   <div class="col-8">
 
-{{#if workouts.length}}
+    {{#if workouts.length}}
 
-{{#each workouts as |randomWorkout|}}
- <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                   <img src={{randomWorkout.workoutGif}}>
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class= "bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</h5>
-                      <p class= 'workoutName'>Name of Workout:{{randomWorkout.workoutName}}</p>
-                     <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
-                       <p class="targetMuscle">Equipment: {{randomWorkout.workoutEquipment}}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-{{!-- <div class="text-center">
+    {{#each workouts as |randomWorkout|}}
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-8 text-center">
+          <img src={{randomWorkout.workoutGif}}>
+        </div>
+        <div class="col-md-4">
+          <div class="card-body">
+            <h5 class='workoutName'>Name of Workout: {{randomWorkout.workoutName}}</h5>
+            <p class="targetEquipment">Equipment: {{randomWorkout.workoutEquipment}}</p>
+            <p class="bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</p>
+            <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- <div class="text-center">
 
-  
-  
-   <img src={{randomWorkout.workoutGif}}>
-</div> --}}
-{{/each}}
-{{/if}}
+
+
+      <img src={{randomWorkout.workoutGif}}>
+    </div> --}}
+    {{/each}}
+    {{/if}}
 
 
 
