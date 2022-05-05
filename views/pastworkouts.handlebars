@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-auto">
+  <div class="col-auto text-center">
     <h1>YOU DID IT 🎉 </h1>
   </div>
 </div>
@@ -22,33 +22,41 @@
         </div>
       </form>
     </div>
-
-    {{#if pastWorkouts}}
-    <div class="col-md-6 past-list">
-      <h3>Completed Workouts</h3>
-
-      {{#each pastWorkouts as |pastWorkout|}}
-      <div class="card mb-3" style="max-width: 540px;">
-
-        <div class="row mb-2">
-          <div class="col-md-8">
-            <div class="text-center">
-              <h3>{{format_date date_created}}</h3>
-              <h5>Length: {{pastWorkout.length}}</h5>
-              <p>
-              <h5 class="rating">Rating:{{pastWorkout.rating}}</h5>
-              </p>
-              <button class="btn btn-sm btn-danger" data-id="{{pastWorkout.id}}
-              ">DELETE</button>
-            </div>
-          </div>
-        </div>
-
-
-        {{/each}}
-        </div>
-        </div>
-        {{/if}}
-       </div>
     </div>
-  <script src="/js/pastWorkouts.js"></script>
+
+    <div class="col-8">
+      {{#if pastWorkouts}}
+      <div class="col-md-6 past-list">
+
+      <h3>Completed Workouts</h3>
+      <br>
+        {{#each pastWorkouts as |pastWorkout|}}
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row mb-2">
+              <div class="col-md-8">
+                <div class="card-body">
+
+                  <div class="text-center">
+                    <h3 class="date">{{format_date date_created}}</h3>
+                    <h5 class= "length">Length: {{pastWorkout.length}}</h5>
+                    <h5 class="rating">Rating:{{pastWorkout.rating}}</h5>
+                    <button class="btn btn-sm btn-danger" data-id="{{pastWorkout.id}}
+              ">DELETE</button>
+                  </div>
+                </div>
+              </div>
+           
+              </div>
+              </div>
+
+
+              {{/each}}
+                                   </div>
+
+          {{/if}}
+    </div>
+    </div>
+    </div>
+
+    
+    <script src="/js/pastWorkouts.js"></script>

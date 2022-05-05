@@ -29,22 +29,19 @@
     <input class="btn btn-custom workoutButton" id="subglow" type="submit" value="submit">
 
     <input class="btn btn-custom compleatedWorkout" type="submit" value="Compleated Workout">
-
-
   </div>
+
   <div class="col-8">
-
     {{#if workouts.length}}
-
     {{#each workouts as |randomWorkout|}}
     <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
-        <div class="col-md-8 text-center">
+        <div class="col-md-7 text-center">
           <img src={{randomWorkout.workoutGif}}>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <div class="card-body">
-            <h5 class='workoutName'>Name of Workout: {{randomWorkout.workoutName}}</h5>
+            <h5 class='workoutName text-center'>{{randomWorkout.workoutName}}</h5>
             <p class="targetEquipment">Equipment: {{randomWorkout.workoutEquipment}}</p>
             <p class="bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</p>
             <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
