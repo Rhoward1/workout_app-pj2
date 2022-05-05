@@ -3,6 +3,7 @@ const router = require('express').Router();
 const axios = require("axios");
 require('dotenv').config();
 
+
 //renders the url when bodypart and equipment are passed in the dropdown menu
 router.get("/exercisedb/:bodypart?/:equipment?", (req, res) => {
 
@@ -17,7 +18,7 @@ const options = {
   url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/'+ req.params.bodypart,
   headers: {
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-    'X-RapidAPI-Key': API_KEY
+    'X-RapidAPI-Key': process.env.API_KEY,
   }
 };
 
