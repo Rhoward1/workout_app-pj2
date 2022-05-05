@@ -16,7 +16,7 @@ const options = {
   url: 'https://exercisedb.p.rapidapi.com/exercises/bodyPart/'+ req.params.bodypart,
   headers: {
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-    'X-RapidAPI-Key': '887b3d8520msh47ace34cf1f5cc5p1409dejsn76d5666871fb'
+    'X-RapidAPI-Key': API_KEY
   }
 };
 
@@ -24,9 +24,7 @@ const options = {
 axios.request(options)
   .then (function (exercises){
     const workouts = getRandomWorkout(exercises.data, equipmentRequest)
-    // console.log(workouts)
     res.render("home", {workouts})
-    // console.log(exercise)
   })
   .catch(function (error) {
 	console.error(error);
@@ -42,7 +40,6 @@ function getRandomWorkout(exercises, equipment) {
   const filterByEquipment = exercises.filter(workout => {
     return workout.equipment === equipment
   })
-  console.log(filterByEquipment)
   for (let i=0; i < 4; i++) {
     const indexNum = Math.floor(Math.random() * filterByEquipment.length)
   const randomWorkout = filterByEquipment[indexNum]
