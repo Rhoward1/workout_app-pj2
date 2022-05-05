@@ -1,6 +1,7 @@
 <h1>Weight 2 Go Fitness</h1>
+<div class="container">
 
-<div class="row">
+<div class="row mb-4 justify-content-center">
   <div class="col-4">
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
@@ -26,25 +27,23 @@
         <option value="kettlebell">kettlebell</option>
       </select>
     </div>
-    <input class="btn btn-custom workoutButton" id="subglow" type="submit" value="submit">
-
-    <input class="btn btn-custom compleatedWorkout" type="submit" value="Compleated Workout">
-
-
+    <input class="btn btn-dark workoutButton" id="subglow" type="submit" value="submit">
+ <a href="/past_workouts" class="btn btn-dark me-3 completedWorkout">Workout Complete</a>
   </div>
-  <div class="col-8">
+  </div>
 
+
+  <div class="row mb-4 justify-content-center">
     {{#if workouts.length}}
-
     {{#each workouts as |randomWorkout|}}
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="max-width: 540px; display:flex; margin: 5px; ">
       <div class="row no-gutters">
-        <div class="col-md-8 text-center">
+        <div class="col-md-7 text-center">
           <img src={{randomWorkout.workoutGif}}>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
           <div class="card-body">
-            <h5 class='workoutName'>Name of Workout: {{randomWorkout.workoutName}}</h5>
+            <h5 class='workoutName text-center'>{{randomWorkout.workoutName}}</h5>
             <p class="targetEquipment">Equipment: {{randomWorkout.workoutEquipment}}</p>
             <p class="bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</p>
             <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
@@ -61,7 +60,7 @@
     {{/each}}
     {{/if}}
 
-
+</div>
 
     {{!-- <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
