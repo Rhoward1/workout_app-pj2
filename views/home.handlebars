@@ -1,7 +1,7 @@
 <h1>Weight 2 Go Fitness</h1>
 <div class="container">
 
-<div class="row">
+<div class="row mb-4 justify-content-center">
   <div class="col-4">
     <div class="input-group mb-3">
       <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
@@ -30,11 +30,13 @@
     <input class="btn btn-custom workoutButton" id="subglow" type="submit" value="submit">
  <a href="/past_workouts" class="btn btn-light me-3 completedWorkout">Workout Complete</a>
   </div>
+  </div>
 
-  <div class="col-8">
+
+  <div class="row mb-4 justify-content-center">
     {{#if workouts.length}}
     {{#each workouts as |randomWorkout|}}
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="max-width: 540px; display:flex; margin: 5px; ">
       <div class="row no-gutters">
         <div class="col-md-7 text-center">
           <img src={{randomWorkout.workoutGif}}>
@@ -57,8 +59,8 @@
     </div> --}}
     {{/each}}
     {{/if}}
-</div>
 
+</div>
 
     {{!-- <div class="card mb-3" style="max-width: 540px;">
       <div class="row no-gutters">
