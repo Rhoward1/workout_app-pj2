@@ -1,6 +1,6 @@
-# Weight To Go Workout Application
+# Weight 2 Go Workout Application
 ----
-## Welcome to the Weight To Go Workout App! 
+## Welcome to the Weight 2 Go Workout App! 
 Made by Ryan Howard, Sarah Turner, and Jade Huynh
 
 ----
@@ -15,6 +15,9 @@ Made by Ryan Howard, Sarah Turner, and Jade Huynh
 * EXPRESS
 * HANDLEBARS
 * SEQUELIZE
+* AXIOS
+* API’s
+
 
 ----
 
@@ -24,10 +27,10 @@ Made by Ryan Howard, Sarah Turner, and Jade Huynh
 
 ----
 
-## Weight To Go Images
+## Weight 2 Go Images
 
-![]()
-![]()
-![]()
+![Landing Page]()
+![Generated Workouts](/public/images/w2gscreenshot.png)
+![Completed Exercises]()
 
 

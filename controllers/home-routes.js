@@ -8,7 +8,8 @@ router.get('/', (req, res) => {
 
 //renders login page
 router.get('/login', (req, res) => {
-  res.render('login')
+  console.log("login", req.session.logged_in)
+  res.render('login', {logged_in: req.session.logged_in})
 });
 
 router.get('/logout', (req, res) => {
