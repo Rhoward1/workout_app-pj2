@@ -25,6 +25,28 @@ const newWorkoutForm = async (event) => {
   }
 };
 
+const deleteBtn = async (e) => {
+  console.log("hello")
+  if (e.target.hasAttribute('data-id')) {
+    const id = e.target.getAttribute('data-id');
+console.log(id)
+    const response = await fetch(`/past_workout/${id}`, {
+      method: 'DELETE',
+    });
+    console.log(response)
+
+    if (response.ok) {
+      document.location.replace('/pastworkouts');
+    } else {
+      alert('Failed to delete project');
+    }
+  }
+};
+
 document
   .querySelector('.new-workout-form')
   .addEventListener('submit', newWorkoutForm)
+
+  document
+  .querySelector('.past-list')
+  .addEventListener('submit', deleteBtn); 

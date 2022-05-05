@@ -24,7 +24,7 @@
     </div>
 
     {{#if pastWorkouts}}
-    <div class="col-md-6 project-list">
+    <div class="col-md-6 past-list">
       <h3>Completed Workouts</h3>
 
       {{#each pastWorkouts as |pastWorkout|}}
@@ -38,14 +38,17 @@
               <p>
               <h5 class="rating">Rating:{{pastWorkout.rating}}</h5>
               </p>
+              <button class="btn btn-sm btn-danger" data-id="{{pastWorkout.id}}
+              ">DELETE</button>
             </div>
           </div>
         </div>
-        
+
 
         {{/each}}
-      {{/if}}
-    {{!-- </div> --}}
-  </div>
-  </div>
+        </div>
+        </div>
+        {{/if}}
+       </div>
+    </div>
   <script src="/js/pastWorkouts.js"></script>
