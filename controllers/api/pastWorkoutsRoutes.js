@@ -22,6 +22,7 @@ router.post('/', async(req, res) => {
             member_id: req.session.member_id,
           },
         });
+        console.log(workoutData)
     
         if (!workoutData) {
           res.status(404).json({ message: 'No project found with this id!' });
