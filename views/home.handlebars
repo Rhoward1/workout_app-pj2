@@ -2,42 +2,44 @@
 <h1>Weight 2 Go Fitness</h1>
 <div class="container">
 
-<div class="row mb-4 justify-content-center">
-  <div class="col-4">
-    <div class="input-group mb-3">
-      <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
-      <select class="form-select" id="body-part-dropdown">
-        <option selected>Choose...</option>
-        <option value="back">back</option>
-        <option value="cardio">cardio</option>
-        <option value="chest">chest</option>
-        <option value="lower arms">lower arms</option>
-        <option value="upper arms">upper arms</option>
-        <option value="shoulders">shoulders</option>
-        <option value="waist">waist</option>
-        <option value="upper legs">upper legs</option>
-        <option value="lower legs">lower legs</option>
-      </select>
+  <div class="row mb-4 justify-content-center">
+    <div class="col-4">
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Select Your Target Area</label>
+        <select class="form-select" id="body-part-dropdown">
+          <option selected>Choose...</option>
+          <option value="back">back</option>
+          <option value="cardio">cardio</option>
+          <option value="chest">chest</option>
+          <option value="lower arms">lower arms</option>
+          <option value="upper arms">upper arms</option>
+          <option value="shoulders">shoulders</option>
+          <option value="waist">waist</option>
+          <option value="upper legs">upper legs</option>
+          <option value="lower legs">lower legs</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment: </label>
+        <select class="form-select" id="equipment-choice">
+          <option selected>Choose...</option>
+          <option value="body weight">body weight</option>
+          <option value="dumbbell">dumbbell</option>
+          <option value="kettlebell">kettlebell</option>
+        </select>
+      </div>
+      <div class="subglow">
+      <input class="btn btn-dark workoutButton" type="submit" value="submit">
+      </div>
+      {{!-- <a href="/past_workouts" class="btn btn-dark me-3 completedWorkout">Workout Complete</a> --}}
     </div>
-    <div class="input-group mb-3">
-      <label class="input-group-text" for="inputGroupSelect01">Choose Your Equipment: </label>
-      <select class="form-select" id="equipment-choice">
-        <option selected>Choose...</option>
-        <option value="body weight">body weight</option>
-        <option value="dumbbell">dumbbell</option>
-        <option value="kettlebell">kettlebell</option>
-      </select>
-    </div>
-    <input class="btn btn-dark workoutButton subglow" type="submit" value="submit">
- <a href="/past_workouts" class="btn btn-dark me-3 completedWorkout">Workout Complete</a>
-  </div>
   </div>
 
 
   <div class="row mb-4 justify-content-center">
     {{#if workouts.length}}
     {{#each workouts as |randomWorkout|}}
-    <div class="card mb-3" style="max-width: 540px; display:flex; margin: 8px; ">
+    <div class="card mb-3" style="max-width: 540px; display:flex; margin: 12px; ">
       <div class="row no-gutters">
         <div class="col-md-7 text-center">
           <img src={{randomWorkout.workoutGif}}>
@@ -48,6 +50,9 @@
             <p class="targetEquipment">Equipment: {{randomWorkout.workoutEquipment}}</p>
             <p class="bodyPart">Body Part: {{randomWorkout.workoutBodypart}}</p>
             <p class="targetMuscle">Target Muscle: {{randomWorkout.workoutTarget}}</p>
+            <div>
+              <a href="/past_workouts" class="btn btn-dark me-3 delete completedWorkout">Workout Complete</a>
+            </div>
           </div>
         </div>
       </div>
@@ -61,28 +66,10 @@
     {{/each}}
     {{/if}}
 
-</div>
-
-    {{!-- <div class="card mb-3" style="max-width: 540px;">
-      <div class="row no-gutters">
-        <div class="col-md-4">
-          <img src="./images/smallplaceholderimage.jpg" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-    </div> --}}
-
-
-
-
   </div>
+
+
+</div>
 
 </div>
 
