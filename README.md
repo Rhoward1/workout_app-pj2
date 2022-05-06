@@ -29,8 +29,15 @@ Made by Ryan Howard, Sarah Turner, and Jade Huynh
 
 ## Weight 2 Go Images
 
-![Landing Page]()
+![Landing Page](/public/images/w2gologin.png)
+
+----
+
 ![Generated Workouts](/public/images/w2gscreenshot.png)
-![Completed Exercises]()
+
+----
+
+![Completed Exercises](/public/images/completeworkout.png)
+----
 
 
