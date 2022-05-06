@@ -64,12 +64,12 @@ body {
       text-align:center ;
       filter: drop-shadow(5px 5px 3px rgb(251, 250, 251));
   }
-h{
+h3{
     font-size: 30px;
     /* font-family: fantasy; */
     color:#fcfbfc;
     text-align:center ;
-    filter: drop-shadow(5px 5px 3px rgb(251, 250, 251));  
+    /* filter: drop-shadow(5px 5px 3px rgb(251, 250, 251));   */
 }
 
 label{
@@ -79,6 +79,19 @@ label{
     text-align:center ;
     filter: drop-shadow(5px 5px 3px rgb(5, 5, 5));
 }
+.form-input{
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.completedWorkout {
+    color:white;
+}
+.delete {
+    color: white;
+      text-align:center ;
+      filter: drop-shadow(2px 2px 1px rgb(252, 2, 186));
+    }
 
 /* .container{
     margin-left: 20px;
