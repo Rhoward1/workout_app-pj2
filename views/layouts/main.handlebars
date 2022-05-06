@@ -78,11 +78,14 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navtext">
         <li class="nav-item">
           {{!-- <a class="nav-link" href="/api/exercise/exercisedb">Home</a> --}}
+          {{#unless logged_in}}
           <a href="/api/exercise/exercisedb" class="btn btn-light me-3 buttons">Home</a>
         </li>
         <li class="nav-item">
           {{!-- <a class="nav-link" href="/past_workouts">Completed Exercises</a> --}}
           <a href="/past_workouts" class="btn btn-light me-3 buttons">Completed Exercise</a>
+          {{/unless}}
+
         </li>
       </ul>
       <!-- Left links -->
@@ -93,10 +96,11 @@
         
       {{!-- <div id="buttons1">
         <a href="/login" class="btn btn-light me-3">Login</a> --}}
-       <div> {{#if logged_in}} 
-        <a href="/logout" class="btn btn-dark" id="logout">Logout</button>
+        <div>
+         {{#if logged_in}}
+         <a href="/login" class="btn btn-dark">Login</a>
         {{else}}
-        <a href="/login" class="btn btn-dark">>Login</a>
+        <a href="/login" class="btn btn-dark" id="logout">Logout</button>
         {{/if}}
         <a href="/signup" class="btn btn-dark">Sign Up</a>
         </div>
