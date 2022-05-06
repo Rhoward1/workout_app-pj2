@@ -3,19 +3,18 @@ const {Member, PastWorkouts }= require("../models")
 
 //renders home page to signup or login
 router.get('/', (req, res) => {
-  res.render('landingpage')
+  res.render('landingpage', {user_id: req.session.member_id, logged_in: req.session.logged_in})
 });
 
 //renders login page
 router.get('/login', (req, res) => {
   console.log("login", req.session.logged_in)
-  res.render('login', {logged_in: req.session.logged_in})
+  res.render('login', {user_id: req.session.member_id, logged_in: req.session.logged_in})
 });
 
 router.get('/logout', (req, res) => {
-  res.render('login')
+   res.render('login')
 });
-
 //renders sign up page
 router.get('/signup', (req, res) => {
   res.render('signup') 
