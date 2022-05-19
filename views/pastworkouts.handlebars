@@ -7,10 +7,17 @@
       
       <br>
       <form class="form new-workout-form" style="">
-        
+         <div class="form-group">
+          <label for="project-name"></label>
+          <input class="form-input"  type="text" placeholder="Name of Exercise" id="name" name="Name of Exercise" />
+        </div>
+         <div class="form-group">
+          <label for="project-name"></label>
+          <input class="form-input"  type="text" placeholder="# of sets" id="sets" name="sets" />
+        </div>
         <div class="form-group">
           <label for="project-name"></label>
-          <input class="form-input"  type="text" placeholder="minutes" id="length" name="length" />
+          <input class="form-input"  type="text" placeholder="# of reps" id="reps" name="reps" />
         </div>
 
         <div class="form-group">
@@ -39,8 +46,9 @@
 
               <div class="text-center">
                 <h4 class="date">{{format_date date_created}}</h4>
-                <h5 class="length">Length: {{pastWorkout.length}}</h5>
-
+                <h5 class="length">Name of Exercise: {{pastWorkout.name}}</h5>
+   <h5 class="length">Sets: {{pastWorkout.sets}}</h5>
+      <h5 class="length">Reps: {{pastWorkout.reps}}</h5>
                 <h5 class="rating">Rating:  {{pastWorkout.rating}}</h5>
 
                 <button class="btn btn-sm btn-dark delete" data-id="{{pastWorkout.id}}

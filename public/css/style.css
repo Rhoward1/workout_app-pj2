@@ -158,3 +158,9 @@ footer{
     margin-bottom: 5px;
 
 }
+
+.login,
+.signup {
+    text-align:left;
+}
+  

@@ -2,14 +2,18 @@
 const newWorkoutForm = async (event) => {
   event.preventDefault();
 
-  const length = document.querySelector('#length').value.trim();
+  const name = document.querySelector('#name').value.trim();
+  const sets = document.querySelector('#sets').value.trim();
+  const reps = document.querySelector('#reps').value.trim();
   const rating = document.querySelector('#rating').value.trim();
 
-  if (length && rating) {
+  if (name && sets && reps && rating) {
     const response = await fetch('/api/past-workout', {
       method: 'POST',
       body: JSON.stringify({
-        length,
+        name,
+        sets,
+        reps,
         rating
       }),
       headers: {

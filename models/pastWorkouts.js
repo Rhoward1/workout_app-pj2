@@ -11,14 +11,22 @@ PastWorkouts.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         date_created: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
           },
 
-        length: {
-            type: DataTypes.STRING,
+        sets: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        reps: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         rating: {
